@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bishara Wedding Invitation</title>
+  <meta name="description" content="A beautiful wedding invitation website.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="cover" class="cover">
+    <p class="cover-eyebrow" id="coverGreeting">Dear Guest</p>
+    <button id="openInvitation" class="seal" type="button" aria-label="Open invitation">
+      <span id="sealMonogram">A&S</span>
+    </button>
+    <p class="cover-hint">Tap to open</p>
+  </div>
+
+  <div class="page-shell">
+    <header class="hero">
+      <p class="hero-blessing" id="heroBlessing"></p>
+      <p class="hero-label" id="heroLabel"></p>
+      <div class="hero-names reveal">
+        <h1 id="partnerOneName"></h1>
+        <span class="name-joiner" id="nameJoiner">&amp;</span>
+        <h1 id="partnerTwoName"></h1>
+      </div>
+      <div class="hero-divider reveal"></div>
+      <div class="hero-date reveal">
+        <p id="weddingDate"></p>
+        <p class="hero-subdate" id="alternateDate"></p>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <h2 class="section-title reveal" id="familiesHeading"></h2>
+        <div class="card-grid reveal">
+          <article class="info-card">
+            <p class="card-label" id="familyOneLabel"></p>
+            <h3 class="card-title" id="familyOneNames"></h3>
+            <p class="card-copy" id="familyOneAddress"></p>
+            <a class="card-link" id="familyOnePhone" href="#">Call family</a>
+          </article>
+          <article class="info-card">
+            <p class="card-label" id="familyTwoLabel"></p>
+            <h3 class="card-title" id="familyTwoNames"></h3>
+            <p class="card-copy" id="familyTwoAddress"></p>
+            <a class="card-link" id="familyTwoPhone" href="#">Call family</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-tight-top">
+        <h2 class="section-title reveal" id="eventsHeading"></h2>
+        <div class="card-grid reveal">
+          <article class="info-card">
+            <p class="card-label" id="eventOneLabel"></p>
+            <h3 class="card-title" id="eventOneVenue"></h3>
+            <p class="card-copy" id="eventOneDetails"></p>
+            <a class="card-link" id="eventOneMap" href="#" target="_blank" rel="noopener noreferrer">Open in maps</a>
+          </article>
+          <article class="info-card">
+            <p class="card-label" id="eventTwoLabel"></p>
+            <h3 class="card-title" id="eventTwoVenue"></h3>
+            <p class="card-copy" id="eventTwoDetails"></p>
+            <a class="card-link" id="eventTwoMap" href="#" target="_blank" rel="noopener noreferrer">Open in maps</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section countdown-section">
+        <div class="countdown-card reveal">
+          <p class="card-label" id="countdownLabel"></p>
+          <h2 class="countdown-title" id="countdownTitle"></h2>
+          <div class="countdown-grid">
+            <div class="countdown-box">
+              <span id="daysValue">00</span>
+              <small>Days</small>
+            </div>
+            <div class="countdown-box">
+              <span id="hoursValue">00</span>
+              <small>Hours</small>
+            </div>
+            <div class="countdown-box">
+              <span id="minutesValue">00</span>
+              <small>Minutes</small>
+            </div>
+            <div class="countdown-box">
+              <span id="secondsValue">00</span>
+              <small>Seconds</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section rsvp-section">
+        <div class="rsvp-card reveal">
+          <h2 class="section-title" id="rsvpHeading"></h2>
+          <p class="rsvp-copy" id="rsvpCopy"></p>
+
+          <div class="rsvp-state">
+            <form id="rsvpForm" class="rsvp-form" novalidate>
+              <label class="field">
+                <span>Your name</span>
+                <input id="guestName" name="guestName" type="text" placeholder="Full name" required>
+              </label>
+
+              <fieldset class="field attendance-fieldset">
+                <legend>Attendance</legend>
+                <label class="choice">
+                  <input type="radio" name="attendance" value="Attending" required>
+                  <span>Attending</span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="attendance" value="Unable to attend" required>
+                  <span>Unable</span>
+                </label>
+              </fieldset>
+
+              <div id="attendanceDetails" class="attendance-details">
+                <label class="field">
+                  <span>Which event</span>
+                  <select id="guestEvent" name="guestEvent">
+                    <option value="">Select an event</option>
+                  </select>
+                </label>
+
+                <label class="field">
+                  <span>Number of guests</span>
+                  <select id="guestCount" name="guestCount">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5+">5+</option>
+                  </select>
+                </label>
+              </div>
+
+              <label class="field">
+                <span>Message</span>
+                <textarea id="guestMessage" name="guestMessage" rows="4" placeholder="Blessings, note, or any message"></textarea>
+              </label>
+
+              <button class="submit-btn" id="submitBtn" type="submit">Send RSVP</button>
+            </form>
+
+            <div id="successState" class="success-state" role="status" aria-live="polite">
+              <p class="success-mark">Blessings received</p>
+              <h3>Thank you for your response</h3>
+              <p>Your email app should open with the RSVP message ready to send.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer-mark reveal" id="closingMark"></p>
+      <p class="footer-copy reveal" id="closingText"></p>
+    </footer>
+  </div>
+
+  <script src="content.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

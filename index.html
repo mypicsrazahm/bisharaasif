@@ -94,6 +94,67 @@
           </div>
         </div>
       </section>
+
+            <section class="section rsvp-section">
+        <div class="rsvp-card reveal">
+          <h2 class="section-title" id="rsvpHeading"></h2>
+          <p class="rsvp-copy" id="rsvpCopy"></p>
+
+          <div class="rsvp-state">
+            <form id="rsvpForm" class="rsvp-form" novalidate>
+              <label class="field">
+                <span>Your name</span>
+                <input id="guestName" name="guestName" type="text" placeholder="Full name" required>
+              </label>
+
+              <fieldset class="field attendance-fieldset">
+                <legend>Attendance</legend>
+                <label class="choice">
+                  <input type="radio" name="attendance" value="Attending" required>
+                  <span>Attending</span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="attendance" value="Unable to attend" required>
+                  <span>Unable</span>
+                </label>
+              </fieldset>
+
+              <div id="attendanceDetails" class="attendance-details">
+                <label class="field">
+                  <span>Which event</span>
+                  <select id="guestEvent" name="guestEvent">
+                    <option value="">Select an event</option>
+                  </select>
+                </label>
+
+                <label class="field">
+                  <span>Number of guests</span>
+                  <select id="guestCount" name="guestCount">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5+">5+</option>
+                  </select>
+                </label>
+              </div>
+
+              <label class="field">
+                <span>Message</span>
+                <textarea id="guestMessage" name="guestMessage" rows="4" placeholder="Blessings, note, or any message"></textarea>
+              </label>
+
+              <button class="submit-btn" id="submitBtn" type="submit">Send RSVP</button>
+            </form>
+
+            <div id="successState" class="success-state" role="status" aria-live="polite">
+              <p class="success-mark">Blessings received</p>
+              <h3>Thank you for your response</h3>
+              <p>Your email app should open with the RSVP message ready to send.</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">

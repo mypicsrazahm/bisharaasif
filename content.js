@@ -38,14 +38,14 @@ window.WEDDING_CONTENT = {
       {
         label: "Nikah Ceremony",
         venue: "Pallinada Muslim\nJama'ath Masjid",
-        details: "11:30 AM to 12:30 PM\nKaniyapuram, Kerala",
-        mapUrl: "https://maps.google.com/?q=Masjid+Noor+Kottakkal"
+        details: "11:30 AM - 12:30 PM\nKaniyapuram, Kerala",
+        mapUrl: "https://maps.app.goo.gl/mrquTfAn64zxgckR8"
       },
       {
         label: "Wedding Reception",
         venue: "Fathima\nConvention Centre",
-        details: "7:00 PM onwards\nChannankara, Kerala",
-        mapUrl: "https://maps.google.com/?q=Grand+Palace+Convention+Centre+Malappuram"
+        details: "Channankara, Kerala",
+        mapUrl: "https://maps.app.goo.gl/9bR5icVg21oCpGAH6"
       }
     ]
   },
